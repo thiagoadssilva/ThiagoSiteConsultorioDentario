@@ -19,6 +19,8 @@
   border: none;
   text-decoration: none !important;
   text-transform: capitalize;
+
+  transition: all ease .2s;
 }
 
 /*INICIO DA MANIPULAÇAO DA BARRA DE ROLAGEM DO NAVEGADOR*/
@@ -43,6 +45,21 @@ html{
   scroll-padding-top: 6.5rem;
 }
 
+.link-btn{
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  background-color: var(--blue);
+  cursor: pointer;
+  font-size: 1.7rem;
+  color: var(--white);
+}
+
+.link-btn:hover{
+  background-color: var(--black);
+  color: var(--white);
+}
+
 /*INICIO DA ESTRUTURA DO HEADER*/
 .header{
   padding: 2rem;
@@ -57,4 +74,81 @@ html{
 .header .logo span{
   color: var(--blue);
 }
+
+.header .nav a{
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: var(--black);
+}
+
+.header .nav a:hover{
+  color: var(--blue);
+}
+
+#menu-btn{
+  font-size: 2.5rem;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
 /*INICIO DA ESTRUTURA DO HEADER*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*INICIO DA ESTRUTURA RESPONSIVA*/
+@media(max-width: 991px){
+  html{
+    font-size: 55%;
+  }
+
+  .header .link-btn{
+    display: none;
+  }
+} 
+
+@media(max-width: 768px){
+  #menu-btn{
+   display: inline-block;
+  }
+
+  /*INICIO Aqui vamos deixar o menu de forma responsiva, colocando ele para ficar abaixo de todo header*/
+  .header .nav{
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background-color: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding: 1rem 0;
+      text-align: center;
+      flex-flow: column;
+      /*Aqui vamos recolhe todo menu para cima*/
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .nav a{
+      margin: 1rem 0;
+      font-size: 2rem;
+  }
+  /*INICIO Aqui vamos deixar o menu de forma responsiva, colocando ele para ficar abaixo de todo header*/
+}
+
+@media(max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+}
+/*FIM DA ESTRUTURA RESPONSIVA*/

@@ -34,6 +34,7 @@
                 </nav>
 
                 <a href="#contact" class="link-btn">Marcar Consulta</a>
+                <div id="menu-btn" class="fas fa-bars"></div>
             </div>
         </div>
     </header>
